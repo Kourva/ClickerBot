@@ -1,2 +1,2 @@
-# ClickerBot
-Web3 Clicker bot for Telegarm's mini app hosted in github pages!
+Planning for make simple web app clicker for telegram miniapps
+
