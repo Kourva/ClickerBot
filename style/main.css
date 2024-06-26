@@ -1,0 +1,34 @@
+@font-face { 
+    font-family: Hacker; 
+    src: url("../assets/fonts/hacker.ttf");
+} 
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+  background:linear-gradient(90deg, transparent 24%,#FDA80311 25%, #FDA80311 30%, transparent 31%, transparent 39%,#FDA80311 40%, #FDA80311 45%, transparent 45%) 0% 0% / 3em 3em,linear-gradient(180deg, transparent 24%,#FDA80311 25%, #FDA80311 30%, transparent 31%, transparent 39%,#FDA80311 40%, #FDA80311 45%, transparent 45%) 0% 0% / 3em 3em #000000;
+opacity:0.9;
+background-size: 15px 15px;
+}
+
+* { 
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+}
+
+main-container {
+    width: 100%;
+    margin: 2 auto;
+}
+
+progress::-moz-progress-bar { background: white; }
+progress::-webkit-progress-value { background: white; }
+progress { background: white; }
