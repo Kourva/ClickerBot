@@ -1,0 +1,22 @@
+.coin-button {
+    display: block;
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    border: None;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    transition: all 0.1s;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0 0 10px #fda80377, 0 0 9px 3px #fda80344;
+}
+
+.coin-button:active {
+    transform: scale(0.98);
+}
+
