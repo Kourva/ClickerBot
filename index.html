@@ -7,8 +7,10 @@
     <!-- Local CSS files -->
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/loader.css">
-    <link rel="stylesheet" href="./style/coin.css">
-    <link rel="stylesheet" href="./style/boost.css">
+    <link rel="stylesheet" href="./style/energy_limit.css">
+    <link rel="stylesheet" href="./style/coin_balance.css">
+    <link rel="stylesheet" href="./style/coin_button.css">
+    <link rel="stylesheet" href="./style/boost_cards.css">
 
     <!-- Telegram WebApp initializing -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -25,26 +27,59 @@
     <title>Kowshan Coin</title>
 </head>
 <body>
+    <!-- Loader container -->
     <div class="loader-container" id="main_loader">
         <div class="loader" ></div>
         <p class="loader-text">Loading... Please wait!</p>
     </div>
 
-   <center>
-        <button class="coin-balance-button" id="coin_balance_button">
-            <h2 class="coin-balance" style="color: #fda803;">$<span id="coin_balance" style="color: #ffffff;">0</span></h2>
-        </button>
-    </center>
+    <div class="main-container">
+       <!-- Coin balance -->
+        <center>
+            <button class="coin-balance-button" id="coin_balance_button">
+                <h2 class="coin-balance" style="color: #fda803;">$<span id="coin_balance" style="color: #ffffff;">0</span></h2>
+            </button>
+        </center>
 
-    <img class="coin-button" src="./assets/pics/coin.png" mpy-click="add_balacne">
+        <!-- Boost buttons -->
+        <center>
+            <button class="boost-button" mpy-click="upgrade_tap">
+                Power lvl:
+                <span id="power_level">1</span><br>
+                Value:
+                <span id="power_value">1</span><br>
+                Upgrade: $
+                <span id="power_money">1</span>
+            </button>
+            <button class="boost-button" mpy-click="upgrade_energy">
+                Energy lvl:
+                <span id="energy_level">1</span><br>
+                Upgrade: $
+                <span id="energy_money">1</span>
+            </button>
+        </center>
 
+        <!-- Coin button -->
+        <img class="coin-button"
+             src="./assets/pics/coin.png" 
+             mpy-click="add_balacne" />
 
-    <center>
-        <button class="boost-button" mpy-click="upgrade_tap">
-            Tap:<span id="tap_value">1</span>
-            ($<span id="tap_money">1</span>)
-        </button>
-    </center>
+        <!-- Energy Limit progress -->
+        <center>
+            <div class="energy-limit-progress-bar">
+                <span id="energy_value">500</span>
+                /
+                <span id="energy_progress_left">500</span>
+                <div class="energy-limit-loader">
+                    <progress class="energy-limit" 
+                        id="energy_progress"
+                        value="500" 
+                        max="100">
+                    </progress>
+                </div>
+            </div>
+        </center>
+    </div>
 
     <script type="mpy" src="./script/main.py" config="./config.json"></script>
     <script type="mpy" src="./script/balance.py" config="./config.json"></script>
