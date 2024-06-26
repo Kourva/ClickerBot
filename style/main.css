@@ -21,14 +21,15 @@ background-size: 15px 15px;
        -khtml-user-select: none; /* Konqueror HTML */
          -moz-user-select: none; /* Firefox */
           -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; 
+              user-select: none;
+          -webkit-outline: none; /* Safari */
+           -khtml-outline: none; /* Konqueror HTML */
+             -moz-outline: none; /* Firefox */
+              -ms-outline: none; /* Internet Explorer/Edge */
+                  outline: none;
 }
 
 main-container {
     width: 100%;
     margin: 2 auto;
 }
-
-progress::-moz-progress-bar { background: white; }
-progress::-webkit-progress-value { background: white; }
-progress { background: white; }
