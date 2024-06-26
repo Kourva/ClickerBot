@@ -13,16 +13,24 @@
 
 .energy-limit {
   width: 90%;
-  height: 20px; 
+  height: 20px;
   margin-right: auto;
   border-radius: 1.3em;
   border: none;
-  background: #fda80333;
+  background: #fda80333; /* Fallback for unsupported browsers */
   border: 1px solid #fda803;
   transition: 0.5s;
 }
 
-.energy-limit::-webkit-progress-value, .energy-limit::-moz-progress-bar {
+.energy-limit::-webkit-progress-bar {
+  background: #fda80333; /* Fallback for unsupported browsers */
+}
+
+.energy-limit::-webkit-progress-value {
+  background: #fda80399;
+}
+
+.energy-limit::-moz-progress-bar {
   background: #fda80399;
 }
 
